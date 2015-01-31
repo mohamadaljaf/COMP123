@@ -24,7 +24,7 @@ namespace Assignment01
         // PUBLIC Methods ********************/
         public void fight()
         {
-            if (hitAttempt())
+            if (hitAttempt() == true)
             {
                 Console.WriteLine("Target hit for {0} damage!", hitDamage());
             }
