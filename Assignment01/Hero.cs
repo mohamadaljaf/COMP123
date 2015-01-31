@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 
 namespace Assignment01
 {
+    // Hero class - blueprint for hero objects
     class Hero
     {
         // PUBLIC Properties ********************/
@@ -30,16 +31,16 @@ namespace Assignment01
         {
             this.name = name;
             randomNum = new Random(); // prevents random numbers from not being so random
-            generateAbilities();
+            this.generateAbilities();
         }
 
         // PUBLIC Methods ********************/
         // makes the hero fight. If a hit lands then the damage will be shown
         public void fight()
         {
-            if (hitAttempt() == true)
+            if (this.hitAttempt() == true)
             {
-                Console.WriteLine("Target hit for {0} damage!", hitDamage());
+                Console.WriteLine("Target hit for {0} damage!", this.hitDamage());
             }
             else
             {
@@ -81,15 +82,15 @@ namespace Assignment01
         // randomly generates the ability numbers for strength, speed, and health between 1 and 100
         private void generateAbilities()
         {
-            strength = randomNum.Next(1, 101);
-            speed = randomNum.Next(1, 101);
-            health = randomNum.Next(1, 101);
+            this.strength = randomNum.Next(1, 101);
+            this.speed = randomNum.Next(1, 101);
+            this.health = randomNum.Next(1, 101);
         }
 
         // randomly determines if the hero hits, chance of hitting is 20%
         private bool hitAttempt()
         {
-            if (randomNum.Next(1, 6) == 1)
+            if (this.randomNum.Next(1, 6) == 1)
             {
                 return true;
             }
@@ -100,7 +101,7 @@ namespace Assignment01
         // calculates the damage the hero causes to the target on a hit
         private int hitDamage()
         {
-            return randomNum.Next(1, 7) * this.strength;
+            return this.randomNum.Next(1, 7) * this.strength;
         }
     }
 }

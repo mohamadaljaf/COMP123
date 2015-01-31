@@ -1,4 +1,6 @@
 ﻿///------------------------------------------------------------------------------------------
+///   Project:              Assignment 01 - The Hero Class
+/// 
 ///   Author:               Mohamad Al-Jaf   
 ///   
 ///   Date last modified:   Janurary 30, 2015
@@ -9,6 +11,7 @@
 ///   Revision History:     2015-01-20: Added a hero class
 ///                         2015-01-25: Completed the hero class
 ///                         2015-01-30: Completed the main method and tested the program
+///                         2015-01-30: Polished the program by adding an unlimited fight mode
 ///------------------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
