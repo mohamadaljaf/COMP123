@@ -18,12 +18,22 @@ namespace Assignment01
         public Hero(string name)
         {
             this.name = name;
+            generateAbilities();
         }
 
         // PUBLIC Methods ********************/
         public void fight()
         {
+            if (hitAttempt())
+            {
+                Console.WriteLine("Target hit for {0} damage!", hitDamage());
+            }
+        }
 
+        // displays the hero's ability scores to the console
+        public void show()
+        {
+            Console.WriteLine("The hero {0} has {1} strength, {2} speed, and {3} health.", this.name, this.strength, this.speed, this.health);
         }
 
         // PRIVATE Methods ********************/
