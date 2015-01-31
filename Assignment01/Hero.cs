@@ -24,6 +24,7 @@ namespace Assignment01
         }
 
         // PUBLIC Methods ********************/
+        // makes the hero fight. If a hit lands then the damage will be shown
         public void fight()
         {
             if (hitAttempt() == true)
@@ -32,7 +33,30 @@ namespace Assignment01
             }
             else
             {
-                Console.WriteLine("Missed! This goat is kinda baaaaaaaad.");
+                Console.Write("Missed! ");
+
+                switch (randomNum.Next(1, 6))
+                {
+                    case 1:
+                        Console.WriteLine("What kinda hero misses?");
+                        break;
+                    case 2:
+                        Console.WriteLine("You only missed by a 100 km.");
+                        break;
+                    case 3:
+                        Console.WriteLine("Consider a change in career, something that doesn't require coordination.");
+                        break;
+                    case 4:
+                        Console.WriteLine("Are you really a hero or are you just wearing a costume?");
+                        break;
+                    case 5:
+                        Console.WriteLine("Did you hit by kryptonite recently?");
+                        break;
+                    default:
+                        Console.WriteLine("How did you break my program?!");
+                        break;
+                }
+                
             }
         }
 
@@ -46,15 +70,15 @@ namespace Assignment01
         // randomly generates the ability numbers for strength, speed, and health between 1 and 100
         private void generateAbilities()
         {
-            strength = randomNum.Next(1, 100);
-            speed = randomNum.Next(1, 100);
-            health = randomNum.Next(1, 100);
+            strength = randomNum.Next(1, 101);
+            speed = randomNum.Next(1, 101);
+            health = randomNum.Next(1, 101);
         }
 
         // randomly determines if the hero hits, chance of hitting is 20%
         private bool hitAttempt()
         {
-            if (randomNum.Next(1, 5) == 1)
+            if (randomNum.Next(1, 6) == 1)
             {
                 return true;
             }
@@ -65,7 +89,7 @@ namespace Assignment01
         // calculates the damage the hero causes to the target on a hit
         private int hitDamage()
         {
-            return randomNum.Next(1, 6) * this.strength;
+            return randomNum.Next(1, 7) * this.strength;
         }
     }
 }
