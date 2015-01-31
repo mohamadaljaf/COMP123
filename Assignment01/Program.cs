@@ -27,6 +27,7 @@ namespace Assignment01
 
             Console.WriteLine("Press the spacebar to hit the target. Press any other key to quit you coward.");
 
+            // lets the user fight as long as they want
             do
             {
                 if (Console.ReadKey().Key == ConsoleKey.Spacebar)

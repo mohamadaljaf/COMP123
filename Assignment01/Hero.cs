@@ -1,4 +1,14 @@
-﻿using System;
+﻿///------------------------------------------------------------------------------------------
+///   Author:               Mohamad Al-Jaf   
+///   
+///   Date last modified:   Janurary 30, 2015
+///   
+///   Class description:    A hero that has the attributes strength, speed and health. Can
+///                         fight, but misses 20% of the time. Damage is displayed to the
+///                         console when a hit lands or a missed message is displayed otherwise.
+///------------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +43,7 @@ namespace Assignment01
             }
             else
             {
+                // if the hero misses then one 1 of 5 random messages will appear
                 Console.Write("Missed! ");
 
                 switch (randomNum.Next(1, 6))
